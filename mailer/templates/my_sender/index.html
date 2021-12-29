@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+         <title>My email sender</title>
+         <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+<body>
+
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                   Send your mail!
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <center>
+        <h3 style = 'font-size: 30px;'>logged as {{from}}</h3>
+        <br>
+        <h3>{{message}}</h3>
+		{{error}}
+    <form method="POST" action ="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class = "form-group">
+            
+            <p> <h3>{{ form.as_p }}</h3></p>
+            
+			<br>
+            <input type="submit" value="Send" name="Send" class = 'btn btn-primary btn-lg'>
+                </div>
+            </form>
+        </center>
+</body>
+</html>
